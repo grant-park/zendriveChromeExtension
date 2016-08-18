@@ -1,0 +1,20 @@
+{
+    "manifest_version": 2,
+
+    "name": "Zendrive Milliseconds",
+    "description": "This extension shows drive timestamps in milliseconds.",
+    "version": "1.0",
+
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_title": "Click here!"
+    },
+    "permissions": [
+        "activeTab",
+        "https://ajax.googleapis.com/"
+    ],
+    "content_scripts": [ {
+        "js": [ "jquery.min.js", "background.js"  ],
+        "matches": [ "http://*/*", "https://*/*" ]
+    } ]
+}
